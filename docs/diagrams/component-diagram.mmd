@@ -1,0 +1,20 @@
+
+flowchart TB
+    UI["react frontend"]
+    API["python backend / rest api"]
+
+    CORE["product and lifecycle-event module"]
+    AUTH["authentication and access control"]
+    SEARCH["search and reporting module"]
+
+    DB[("postgresql database")]
+
+    UI -->|"http / json"| API
+
+    API --> CORE
+    API --> AUTH
+    API --> SEARCH
+
+    CORE --> DB
+    AUTH --> DB
+    SEARCH --> DB
