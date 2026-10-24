@@ -1,0 +1,46 @@
+# Literature Review and Source Analysis
+
+## 1. Overview and Core Themes
+
+A critical review of 14 scientific publications was conducted to support the development of the **Product Lifecycle Tracking Platform** («Разработка платформы для отслеживания жизненного цикла продукции»). The reviewed literature focuses on Digital Product Passports (DPP), circular economy information flows, data governance, and lifecycle tracking mechanisms.
+
+The key insights directly informing the project requirements and architectural decisions include:
+* **Information Gaps & Barriers:** Fragmented data across lifecycle stages hinders tracking, maintenance, reuse, and recycling of products (Wagner, 2025; Lopes & Barata, 2024).
+* **Adoption Drivers & Security:** Successful implementation requires explicit access control, data integrity, and mitigation of security concerns between participating organizations (Chaudhuri et al., 2025; Ducuing & Reich, 2023).
+* **Technical Feasibility & Architectures:** Prototype implementations demonstrate that decentralized and web-based systems can record chronological product event histories, though integration complexities remain (Vilchez et al., 2025; Paolucci et al., 2025; Plociennik et al., 2024).
+
+---
+
+## 2. Structured Analysis Table of Publications
+
+The following table summarizes the 14 scientific sources analyzed for the platform design, highlighting their research problems, methodologies, findings, and limitations:
+
+| № | Name, Author(s), Year | Research Problem | Method | Approach / Technology | Main Findings | Limitations |
+|---|---|---|---|---|---|---|
+| 1 | Digital Product Passport: A Review and Research Agenda. Carla Lopes, João Barata, 2024. | Fragmented DPP research and lack of consolidated understanding. | Systematic literature review & bibliometric analysis. | Keyword-network analysis using VOSviewer; concepts classification. | Synthesises DPP information categories, technologies, and adoption challenges. | Conceptual focus without experimental system-performance evaluation. |
+| 2 | Information Barriers to Circularity for Electronic Products and the Potential of Digital Product Passports. Eduard Wagner, 2025. | Information gaps affecting lifecycle stages of electronic products. | Literature analysis & inductive-deductive coding across lifecycle stages. | Classification of direct gaps and indirect knowledge-related barriers. | Identifies missing material/dismantling info and device condition gaps. | Literature-derived; lacks deployment evaluation and cost assessment. |
+| 3 | Impact Pathways: Digital Product Passport for embedding circularity in electronics supply chains. Atanu Chaudhuri et al., 2025. | Drivers and barriers for DPP adoption in electronics supply chains. | Exploratory qualitative interviews (39 interviews across OEMs/partners). | Stakeholder-based analysis of drivers and barriers. | Identifies drivers (compliance, transparency) and barriers (security, data integrity). | Concentrated sample; findings describe expectations, not deployed systems. |
+| 4 | Exploring the value ecosystem of digital product passports. Anna Gieß, Frederik Möller, 2025. | Unclear actor relationships and value exchanges in DPP ecosystems. | Data collection, inductive coding, e³-value modelling. | Generic e³-value model instantiated for battery passports. | Models interactions among manufacturers, suppliers, consumers, and recyclers. | Dependent on published data without direct stakeholder interviews. |
+| 5 | Digital product passport for sustainable and circular supply chain management: a structured review of use cases. Angappa Zhang, Stefan Seuring, 2024. | Insufficient explanation of supply-chain activities supported by DPP. | Structured literature search and content analysis. | Coding use cases by stakeholder, scenario, and evidence type. | Maps opportunities across product repair, reuse, and end-of-life management. | Heavily focused on construction (42/82); only 4 electrical cases. |
+| 6 | Digital product passports for a circular economy: Data needs for product life cycle decision-making. Steffen Foldager Jensen et al., 2023. | Unclear data needs for circular decision-making across product life cycles. | Qualitative interview study and data mapping. | Data requirement categorization across lifecycle stages. | Defines mandatory data elements needed for tracking and end-of-use decisions. | Case-specific limitations and lack of real-time integration analysis. |
+| 7 | Enabling a dynamic information flow in digital product passports during product use phase. Paul Keng Fai Wan, Shanshan Jiang, 2025. | Static records failing to capture dynamic events during product usage. | Literature review and conceptual framework design. | Framework for dynamic usage event registration and updates. | Demonstrates necessity of recording post-registration chronological events. | Conceptual framework without live cloud backend load testing. |
+| 8 | Digital Product Passport in support of Data-Driven End-of-Use Strategies. Andreas Christensen et al., 2025. | Lack of systems perspective in designing end-of-use data collection. | Systems design approach and qualitative analysis. | System architecture mapping for end-of-use strategies. | Links structured event histories to decision-making at product end-of-life. | High-level conceptual mapping requiring technical refinement. |
+| 9 | Data Governance for Compliance with the European Digital Product Passport. Xabier Narbaiza Iriondo et al., 2026. | Compliance and governance issues in cross-organizational DPP management. | Systematic literature review on data governance rules. | Classification of governance frameworks and compliance rules. | Outlines access control, authorization, and data sovereignty rules. | Focused on regulatory compliance rather than UX and API performance. |
+| 10 | Data governance: Digital product passports as a case study. Charlotte Ducuing, René Herbert Reich, 2023. | Legal and technical data governance challenges in shared passports. | Legal and technical case study analysis. | Analysis of data ownership, access rights, and privacy. | Highlights necessity of strict access control between participating entities. | Legal focus without working software prototype evaluation. |
+| 11 | Demonstration of a digital product passport system for second-hand electronic devices. Pedro Vilchez et al., 2025. | Lack of practical prototypes for tracking second-hand device lifecycles. | Prototype development and experimental demonstration. | Web-based prototype for second-hand electronic devices. | Demonstrates feasibility of recording and retrieving second-hand device history. | Limited to second-hand electronics testing scenario. |
+| 12 | Development of a Decentralized Digital Product Passport for EEE. Alessandro Paolucci et al., 2025. | Centralized failure points in electrical equipment lifecycle tracking. | System design and prototype implementation. | Decentralized digital product passport architecture. | Shows decentralized models enhance traceability and data integrity. | High computational overhead and integration complexity. |
+| 13 | Connecting Producers and Recyclers: A Digital Product Passport Concept. Christiane Plociennik et al., 2024. | Communication gap between product producers and end-of-life recyclers. | Concept formulation and pilot implementation. | Passport concept connecting manufacturing and end-of-life systems. | Validates data transfer accuracy between different lifecycle actors. | Limited pilot scale; requires broader stakeholder validation. |
+| 14 | Digital Product Passports: Framework Design and Validation. Stig Morten Lyse, Lizhen Huang, 2026. | Inconsistent framework design and lack of validation standards for DPPs. | Systematic literature review on design and validation. | Categorization of architectural patterns and validation methods. | Synthesizes architectural design patterns and verification approaches. | Theoretical synthesis requiring practical domain application. |
+
+---
+
+## 3. Key Findings & Project Implications
+
+Based on the synthesis of these 14 studies[cite: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], the design of our **Product Lifecycle Tracking Platform** incorporates the following principles:
+
+1. **Functional Alignment (FR-01 to FR-06):**
+   * Literature emphasizes the need for chronological event history tracking (Wan & Jiang, 2025) and robust access control between organizational roles (Ducuing & Reich, 2023; Iriondo et al., 2026). This supports our **FR-01, FR-03, FR-04, and FR-06** requirements.
+2. **System Architecture Alignment:**
+   * Practical demonstrations (Vilchez et al., 2025; Plociennik et al., 2024) justify our three-tier architecture (React frontend, Python backend, relational database) for handling structured lifecycle events without unnecessary operational overhead.
+3. **Addressing Literature Limitations:**
+   * While existing research is largely conceptual or limited to narrow electronics cases (Wagner, 2025; Zhang & Seuring, 2024)[cite: 2, 5], our prototype maintains an adaptable domain model suitable for diverse product categories and organizational workflows.
