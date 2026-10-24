@@ -1,0 +1,35 @@
+
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam packageStyle rectangle
+
+actor "authorized employee" as employee
+actor "administrator" as admin
+actor "external participant\n(provisional)" as external
+
+rectangle "product lifecycle tracking platform" {
+  usecase "sign in" as uc1
+  usecase "register product" as uc2
+  usecase "search products" as uc3
+  usecase "view product record" as uc4
+  usecase "view lifecycle history" as uc5
+  usecase "register lifecycle event" as uc6
+  usecase "view basic reports" as uc7
+  usecase "manage users and roles" as uc8
+  usecase "view permitted product history" as uc9
+}
+
+employee -- uc1
+employee -- uc2
+employee -- uc3
+employee -- uc4
+employee -- uc5
+employee -- uc6
+employee -- uc7
+
+admin -- uc1
+admin -- uc8
+
+external -- uc9
+@enduml

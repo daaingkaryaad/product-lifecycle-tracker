@@ -1,0 +1,11 @@
+
+flowchart TB
+    A["organization employee"]
+    B["system administrator"]
+    C["external participant (provisional)"]
+
+    S["product lifecycle tracking platform"]
+
+    A <-->|"product records and lifecycle events"| S
+    B <-->|"accounts and permissions"| S
+    C <-->|"permitted product history"| S
